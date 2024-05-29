@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+} 
+
+.logo{
+    width: 180px;
+    cursor: pointer;
+}
+
+.navbar{
+    width: 88%;
+    margin: auto;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+a {
+    color: maroon;
+}
+
+.socials {
+    align-items: center;
+    width: 50px;
+    cursor: pointer;
+}
