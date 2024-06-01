@@ -2,15 +2,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins';
-    opacity: 0;
-    transform: translateY(30px);
-    animation: moveup 0.5s linear forwards;
-} 
-@keyframes moveup {
-    100%{
-        opacity: 1;
-        transform: translateY(0px);
-    }
+ 
 }
 
 .heading { 
@@ -51,6 +43,18 @@ body {
     font-size: 52px;
 }
 
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+} 
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
 .main-logo{
     margin: auto;
     align-items: center;
@@ -66,7 +70,7 @@ body {
 .navbar{
     width: 88%;
     margin: auto;
-    padding: 25px 0;
+    padding: 35px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;

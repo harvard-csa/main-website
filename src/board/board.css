@@ -2,6 +2,9 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins';
+}
+
+.anim {
     opacity: 0;
     transform: translateY(30px);
     animation: moveup 0.5s linear forwards;
