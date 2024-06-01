@@ -30,6 +30,11 @@ body {
     font-size: 15px;
 }
 
+footer p {
+    color: maroon;
+    font-size: 18px;
+}
+
 a {
     color: maroon;
 }
@@ -38,4 +43,55 @@ a {
     align-items: center;
     width: 50px;
     cursor: pointer;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    margin: 0 220px 150px 220px;
+}
+
+.pic {
+    width: 90%;
+}
+
+.pic img {
+    width: 100%
+}
+
+.caption {
+    margin-left: -200px;
+    background-color: maroon;
+    padding: 60px;
+    color: white;
+    width: 50%;
+}
+
+.caption-left {
+    margin-right: -200px;
+    background-color: maroon;
+    padding: 60px;
+    color: white;
+    width: 50%;
+    z-index: 1;
+}
+
+.anim > h1 {
+    text-align: center;
+    align-items: center;
+    margin: 50px 0 100px;
+    padding: 0;
+    font-size: 45px;
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+} 
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
 }
