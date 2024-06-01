@@ -1,9 +1,11 @@
 body {
-    overflow: hidden;
+    /* overflow: hidden; */
     margin: 0;
     padding: 0;
     font-family: 'Poppins';
     background-image: url('../../imgs/harvard-background.png'); 
+    background-repeat: no-repeat;
+    background-size: cover;
 }  
 
 .logo{
@@ -77,6 +79,7 @@ a {
     opacity: 0;
     transform: translateY(30px);
     animation: moveup 0.5s linear forwards;
+    padding: 0 80px;
 } 
 @keyframes moveup {
     100%{
@@ -92,18 +95,19 @@ a {
 
 button {
     border: none;
-    padding: 25px 35px;
+    padding: 30px 35px;
     text-align: center;
     align-items: center;
-    display: block;
     font-size: 18px;
-    margin: auto;
+    margin: 0 80px;
     border-radius: 50px;
     transition: 0.5s;
+    /* width: 90%; */
 }
 
 button:hover {
     background-color:lightgrey;
+    cursor: pointer;
 }
 
 h1 {
@@ -113,5 +117,14 @@ h1 {
 h2 {
     font-size: 18px;
     margin: 30px;
+    text-shadow: 2px 2px black;
 }
 
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* width: 100%; */
+    /* border-style: solid; */
+    padding: 20px;
+}
