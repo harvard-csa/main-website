@@ -76,7 +76,6 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit:cover;
-    padding: 0px 50px 0px 0px;
 }
 
 .chair h2 {
@@ -86,4 +85,19 @@ h1 {
 .chair p {
     text-align: left;
     align-items: center;
+}
+
+footer {
+    color: maroon;
+    font-size: 18px;
+}
+
+a {
+    color: maroon;
+}
+
+.socials {
+    align-items: center;
+    width: 50px;
+    cursor: pointer;
 }

@@ -105,6 +105,11 @@ body {
     border-radius: 10px;
 }
 
+footer {
+    color: maroon;
+    font-size: 18px;
+}
+
 a {
     color: maroon;
 }
