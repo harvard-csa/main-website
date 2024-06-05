@@ -126,9 +126,15 @@ span {
 @media (max-width: 900px) {
     .chair {
         flex-direction: column;
-        /* height: 500px; */
+        margin: 0;
     }
     .r {
         flex-direction: column-reverse;
+    }
+    .grid-item {
+        padding: 0;
+    }
+    .grid-pic {
+        padding: 0;
     }
 }
