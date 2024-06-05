@@ -95,3 +95,19 @@ a {
         transform: translateY(0px);
     }
 }
+
+.nav-button {
+    border-style: solid;
+    display: block;
+    width: 75px;
+    background: linear-gradient( rgb(42, 0, 0), rgb(128, 0, 0));
+    padding: 9px;
+    text-align: center;
+    border-radius: 7px;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+span {
+    color: white;
+}

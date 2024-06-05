@@ -93,3 +93,15 @@ h1 {
         transform: translateY(0px);
     }
 }
+
+.nav-button {
+    border-style: solid;
+    display: block;
+    width: 75px;
+    background: linear-gradient( rgb(42, 0, 0, 1), rgb(128, 0, 0, 0.7));
+    padding: 9px;
+    text-align: center;
+    border-radius: 7px;
+    font-weight: bold;
+    line-height: 25px;
+}

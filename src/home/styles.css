@@ -46,7 +46,7 @@ body {
 .anim {
     opacity: 0;
     transform: translateY(30px);
-    animation: moveup 0.5s linear forwards;
+    animation: moveup 3s linear forwards;
 } 
 @keyframes moveup {
     100%{
@@ -122,4 +122,16 @@ a {
     align-items: center;
     width: 50px;
     cursor: pointer;
+}
+
+.nav-button {
+    border-style: solid;
+    display: block;
+    width: 75px;
+    background: linear-gradient( rgb(42, 0, 0, 1), rgb(128, 0, 0, 0.7));
+    padding: 9px;
+    text-align: center;
+    border-radius: 7px;
+    font-weight: bold;
+    line-height: 25px;
 }
