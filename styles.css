@@ -5,6 +5,10 @@ body {
  
 }
 
+video {
+    background-color: black;
+}
+
 .heading { 
     position: relative; 
     overflow: hidden;
