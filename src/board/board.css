@@ -126,7 +126,7 @@ span {
 @media (max-width: 900px) {
     .chair {
         flex-direction: column;
-        margin: 0;
+        margin: 10px;
     }
     .r {
         flex-direction: column-reverse;
