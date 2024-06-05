@@ -78,7 +78,7 @@ a {
     margin: 0 15%;
     opacity: 0;
     transform: translateY(30px);
-    animation: moveup 0.5s linear forwards;
+    animation: moveup 1s linear forwards;
     padding: 0 80px;
 } 
 @keyframes moveup {
@@ -137,6 +137,5 @@ h2 {
     padding: 9px;
     text-align: center;
     border-radius: 7px;
-    font-weight: bold;
     line-height: 25px;
 }
