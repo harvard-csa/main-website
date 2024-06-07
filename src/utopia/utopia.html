@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="utopia.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <title>CSA Utopia</title>
+</head>
+<body>
+    <div class="bkgrd-img">
+        <nav class="navbar">
+            <img class="logo" src="../../imgs/whitelogotext.png">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../about/about.html">About</a></li>
+                <li><a style="text-decoration: underline; text-underline-offset: 8px;" href="../board/board.html">Meet the Board</a></li>
+                <li><a href="../alum/alum.html">Alumni</a></li>
+                <li><a href="../sponsors/sponsors.html">Sponsors</a></li>
+                <li><a class="nav-button" href="../signup/signup.html"><span>Sign Up</span></a></li>
+            </ul>
+        </nav>
+        <div class="spacing">
+            <h1><span class="huge-font">Utopia is Back.</span></h1>
+            <h1>date</h1>
+            <div class="buttons">
+                <form action="https://docs.google.com/forms/">
+                    <button type="submit">sold out!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="poster">
+        <div class="column">
+            <img src="../../imgs/UTOPIA+POSTER+PROB.jpeg" alt="">
+        </div>
+        <div class="column">
+            <h2>Boston’s biggest and best intercollegiate yacht party of the year.</h2>
+            <p>Utopia tickets have <b>SOLD OUT</b>. If you purchased a ticket but can no longer attend, please request for a refund <a href="https://forms.gle/ZSgN6drzHCK56QzHA"><b>here</b></a>. We are allowing refunds for a limited number of ticket holders.</p>
+
+            <p><i>If you are unable to purchase a ticket after regular ticket sales, there will be a <b>very limited amount</b> available for purchase at the door. Tickets will be first-come first-served, and are not guaranteed.</i></p>
+                
+            <p>In order to reserve a spot, you must submit payment via Venmo (@harvardutopia2023) or Zelle ((617) 849-0451) <b>within HALF AN HOUR</b> of submitting this form. </p>
+                
+            <p>If you successfully purchased a ticket, you should have received a confirmation email within <b>24 hours</b> of your purchase (which may have gone to your Spam folder). If you did not receive a confirmation email, you were not approved for a ticket, even if you already submitted payment. If you already submitted payment but did not receive a confirmation email, please reach out to utopia@harvardcsa.org to receive a refund. </p>
+        </div>
+    </div>
+    <div class="info">
+        <div class="icons">
+            <div class="card">
+                <img src="" alt="">
+                <h2>ATTIRE</h2>
+                <p>Cocktail attire requested. It will be cold, so a coat is recommended. We will have a coat check onboard available for guest use.</p>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <h2>ALCOHOL POLICY</h2>
+                <p>Food or alcohol of any kind will not be permitted aboard the vessel. There will be a security check before boarding.</p>
+            </div>
+            <div class="card">
+                <img src="" alt="">
+                <h2>DEPARTURE TIME</h2>
+                <p>The boat will depart at 8:00pm promptly. Final boarding will be at 7:45pm. If you are late, you will not be able to board the boat.</p>
+            </div>
+        </div>
+        <div class="faq">
+            <div class="label">
+                <h1>FAQs</h1>
+            </div>
+            <div class="questions">
+                <hr>
+                <button class="collapsible">What is Utopia?</button>
+                <div class="content">
+                    <p>Utopia is an annual intercollegiate boat party hosted by the Havard-Radcliffe Chinese Students Association, in partnership with other Boston-area colleges. </p>
+                </div>
+                <hr>
+                <button class="collapsible">How much are tickets?</button>
+                <div class="content">
+                    <p>Early Bird (limited quantity):</p>
+                    <p>Regular:</p>
+                </div>
+                <hr>
+                <button class="collapsible">I purchased a ticket, but I can no longer attend.</button>
+                <div class="content">
+                    <p>Utopia tickets are non-refundable. You can, however, transfer your ticket to another guest. Please email utopia@harvardcsa.org with your name, as well as the name of the person you would like to transfer the ticket to. </p>
+                </div>
+                <hr>
+                <button class="collapsible">Can I purchase tickets if I don't attend Harvard?</button>
+                <div class="content">
+                    <p>Yes, Utopia is open to all college students in the greater Boston impact and beyond. If you’re a representative from a college and would like to partner with us, please reach out to utopia@harvardcsa.org.</p>
+                </div>
+                <hr>
+                <button class="collapsible">Who can I contact with questions/concerns?</button>
+                <div class="content">
+                    <p>Please direct all inquiries to utopia@harvardcsa.org.</p>
+                </div>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <footer class="navbar">
+        <p>Email us at <a href="mailto: csa@harvardcsa.org">csa@harvardcsa.org</a></p>
+        <ul>
+            <li><a href="https://www.facebook.com/hrcsa/"><img class="socials" src="../../imgs/facebook.png"></a></li>
+            <li><a href="https://www.twitter.com/HarvardCSA"><img class="socials" src="../../imgs/twitter.png"></a></li>
+            <li><a href="https://www.instagram.com/harvardradcliffecsa"><img class="socials" src="../../imgs/insta.png"></a></li>
+            <li><a href="https://www.linkedin.com/company/harvard-radcliffe-chinese-students-association/"><img class="socials" src="../../imgs/linkedin.png"></a></li>
+        </ul>
+    </footer>
+</body>
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight){
+          content.style.maxHeight = null;
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+        } 
+      });
+    }
+    </script>
+
+</html>
