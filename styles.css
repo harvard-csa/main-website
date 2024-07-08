@@ -83,10 +83,21 @@ ul li a:hover {
 }
 
 .content {
-    margin: 0 15rem;
-    padding: 0;
-    font-size: 16px;
-    line-height: 30px;
+  margin: 0 15rem;
+  padding: 0;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+footer {
+  color: maroon;
+  font-size: 16px;
+}
+
+.socials {
+    align-items: center;
+    width: 50px;
+    cursor: pointer;
   }
 
 @media (max-width: 900px) {
@@ -135,6 +146,14 @@ ul li a:hover {
   .content {
     margin: 2rem;
   }
+
+  footer {
+    font-size: 14px;
+  }
+
+  .socials {
+    width: 40px;
+  }
 }
 /* .heading { 
     position: relative; 
@@ -151,6 +170,7 @@ ul li a:hover {
 .shadow {
   overflow-x: hidden;
 }
+
 .shadow::after {
   background-image: linear-gradient(
     rgb(0, 0, 0, 0.5),
@@ -193,24 +213,11 @@ ul li a:hover {
   border-radius: 10px;
 }
 
-footer {
-  color: maroon;
-  font-size: 18px;
-}
-
-footer p {
-  margin-right: auto;
-}
-
-a {
+footer a {
   color: maroon;
 }
 
-.socials {
-  align-items: center;
-  width: 50px;
-  cursor: pointer;
-}
+
 
 .nav-button {
   border-style: solid;
