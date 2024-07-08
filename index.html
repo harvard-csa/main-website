@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>CSA</title>
 </head>
 <body>
-    <div class="container">
-        <div class="heading">
+    <!-- <div class="container"> -->
+        <!-- <div class="heading"> -->
             <div class="shadow">
                 <video autoplay muted loop id="sizzle">
-                    <source src="videos/CSA Sizzle Reel 720.mov" type="video/mp4">
+                    <source src="videos/CSA Sizzle Reel 2.0.mp4" type="video/mp4">
                 </video>
                 <div class="overlay">
-                    <nav class="navbar">
+                    <nav class="navbar" id="myTopnav">
+                        <input type="checkbox" id="check">
+                        <label for="check" class="checkbtn">
+                            <i class="fa fa-bars"></i>
+                        </label>
                         <img class="logo" src="imgs/whitelogotext.png">
                         <ul>
                             <li><a style="text-decoration: underline; text-underline-offset: 8px;" href="index.html">Home</a></li>
@@ -24,18 +30,18 @@
                             <li><a href="src/alum/alum.html">Alumni</a></li>
                             <li><a href="src/sponsors/sponsors.html">Sponsors</a></li>
                             <li><a class="nav-button" href="src/signup/signup.html">Sign Up</a></li>
-                        </ul>
+                        </ul>       
                     </nav>
                     <br><br>
                     <div class="anim">
-                        <img class="main-logo" src="imgs/whitelogo.png">
+                        <img id="main-logo" src="imgs/whitelogo.png">
                         <p>Welcome Home</p>  
                     </div>
                 </div>
             </div>
-        </div>
+        <!-- </div> -->
+
         <br><br><br><br>
-        
         <div class="content">
             <p>你好!</p>
             <br>
@@ -67,7 +73,8 @@
             <p>Meet our <a href=src/board/board.html>fall 2024 board!</a></p>
         </div>
         <br><br>
-        <footer class="navbar">
+        <!-- <footer class="navbar"> -->
+        <footer>
             <p>Email us at <a href="mailto: csa@harvardcsa.org">csa@harvardcsa.org</a></p>
             <ul>
                 <li><a href="https://www.facebook.com/hrcsa/"><img class="socials" src="imgs/facebook.png"></a></li>
@@ -79,4 +86,15 @@
         <br><br>
     </div>
 </body>
-</html>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+    </script>
+</html> 

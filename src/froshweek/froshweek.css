@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+} 
+@keyframes moveup {
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.logo{
+    width: 180px;
+    cursor: pointer;
+}
+
+.navbar{
+    width: 88%;
+    margin: auto;
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+a {
+    color: maroon;
+}
+
+.socials {
+    align-items: center;
+    width: 50px;
+    cursor: pointer;
+}
+
+h1 {
+    text-align: center;
+    margin: auto;
+    font-size: 56px;
+}
+
+.event {
+    display: flex;
+    margin: 150px;
+    align-items: center;
+    justify-content: center;
+    /* padding: 60px; */
+}
+
+.column {
+    flex: 1;
+    padding: 60px;
+}
+
+.column img {
+    /* margin: auto;
+    padding: auto; */
+    width: 90%;
+    height: 90%;
+    object-fit:cover;
+}
+
+.column h2 {
+    text-align: center;
+}
+
+.column p {
+    /* text-align: left; */
+    align-items: center;
+}
+
+footer {
+    color: maroon;
+    font-size: 18px;
+}
+
+a {
+    color: maroon;
+}
+
+.socials {
+    align-items: center;
+    width: 50px;
+    cursor: pointer;
+}
+
+.nav-button {
+    border-style: solid;
+    display: block;
+    width: 75px;
+    background: linear-gradient( rgb(42, 0, 0), rgb(128, 0, 0));
+    padding: 9px;
+    text-align: center;
+    border-radius: 7px;
+    line-height: 25px;
+}
+
+span {
+    color: white;
+}
+
+
+@media (max-width: 900px) {
+    .chair {
+        flex-direction: column;
+        margin: 20px;
+    }
+    .r {
+        flex-direction: column-reverse;
+    }
+    .grid-item {
+        padding: 0;
+    }
+    .grid-pic {
+        padding: 0;
+    }
+}
