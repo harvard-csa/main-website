@@ -196,6 +196,10 @@ span {
     padding: 1rem;
     text-align: center;
     flex: 1;
+  } 
+
+  .r {
+    flex-direction: column-reverse;
   }
 
   .pic,
