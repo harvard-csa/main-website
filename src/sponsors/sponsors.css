@@ -87,7 +87,7 @@ ul li a:hover {
 .sponsor-icons img {
   /* width:  100px; */
   max-height: 250px;
-  object-fit: cover;
+  object-fit: contain;
   padding: 25px;
 }
 
@@ -183,7 +183,7 @@ a {
   }
 
   .sponsor-icons img {
-    height: 100%;
+    max-height: 100%;
     max-width:  90%;
     display: block;
     margin-left: auto;
