@@ -126,9 +126,9 @@ a {
   display: block;
   width: 75px;
   background: linear-gradient(rgb(42, 0, 0), rgb(128, 0, 0));
-  padding: 9px;
+  padding: 12px;
   text-align: center;
-  border-radius: 7px;
+  border-radius: 10px;
   line-height: 25px;
 }
 

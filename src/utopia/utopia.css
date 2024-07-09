@@ -80,9 +80,9 @@ a {
   display: block;
   width: 75px;
   background: linear-gradient(rgb(42, 0, 0, 1), rgb(128, 0, 0, 0.7));
-  padding: 9px;
+  padding: 12px;
   text-align: center;
-  border-radius: 7px;
+  border-radius: 10px;
   line-height: 25px;
 }
 
@@ -132,7 +132,6 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding: 20px; */
 }
 
 .poster {
@@ -203,7 +202,6 @@ button:hover {
 .collapsible {
   background-color: maroon;
   color: white;
-  /* cursor: pointer; */
   padding: 25px;
   width: 100%;
   border: none;
@@ -300,6 +298,10 @@ button:hover {
   .card,
   .faq > * {
     flex: 1;
+  }
+
+  .column {
+    padding-bottom: 0;
   }
 
   .faq {

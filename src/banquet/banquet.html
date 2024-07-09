@@ -8,21 +8,32 @@
       href="https://fonts.googleapis.com/css?family=Poppins"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <title>Banquet</title>
   </head>
   <body>
     <div class="bkgrd-img">
-      <nav class="navbar">
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fa fa-bars"></i>
+        </label>
         <img class="logo" src="../../imgs/whitelogotext.png" />
         <ul>
           <li><a href="../../index.html">Home</a></li>
-          <li><a href="../about/about.html">About</a></li>
           <li>
             <a
               style="text-decoration: underline; text-underline-offset: 8px"
-              href="../board/board.html"
-              >Meet the Board</a
+              href="../banquet/banquet.html"
+              >Banquet</a
             >
+          </li>
+          <li><a href="../about/about.html">About</a></li>
+          <li>
+            <a href="../board/board.html">Meet the Board</a>
           </li>
           <li><a href="../alum/alum.html">Alumni</a></li>
           <li><a href="../sponsors/sponsors.html">Sponsors</a></li>
@@ -34,7 +45,9 @@
         </ul>
       </nav>
       <div class="spacing">
-        <h1><span class="huge-font">Utopia is Back.</span></h1>
+        <h1>
+          <span class="huge-font"><i>CSA Presents:</i> Banquet</span>
+        </h1>
         <h1>date</h1>
         <div class="buttons">
           <form action="https://docs.google.com/forms/">
@@ -43,77 +56,43 @@
         </div>
       </div>
     </div>
-    <div class="poster-container">
-      <div class="poster">
-        <div class="column">
-          <img src="../../imgs/UTOPIA+POSTER+PROB.jpeg" alt="" />
-        </div>
-        <div class="column">
-          <h2>
-            Boston’s biggest and best intercollegiate yacht party of the year.
-          </h2>
-          <p>
-            Utopia tickets have <b>SOLD OUT</b>. If you purchased a ticket but
-            can no longer attend, please request for a refund
-            <a href="https://forms.gle/ZSgN6drzHCK56QzHA"><b>here</b></a
-            >. We are allowing refunds for a limited number of ticket holders.
-          </p>
 
-          <p>
-            <i
-              >If you are unable to purchase a ticket after regular ticket
-              sales, there will be a <b>very limited amount</b> available for
-              purchase at the door. Tickets will be first-come first-served, and
-              are not guaranteed.</i
-            >
-          </p>
-
-          <p>
-            In order to reserve a spot, you must submit payment via Venmo
-            (@harvardutopia2023) or Zelle ((617) 849-0451)
-            <b>within HALF AN HOUR</b> of submitting this form.
-          </p>
-
-          <p>
-            If you successfully purchased a ticket, you should have received a
-            confirmation email within <b>24 hours</b> of your purchase (which
-            may have gone to your Spam folder). If you did not receive a
-            confirmation email, you were not approved for a ticket, even if you
-            already submitted payment. If you already submitted payment but did
-            not receive a confirmation email, please reach out to
-            utopia@harvardcsa.org to receive a refund.
-          </p>
-        </div>
+    <div class="poster">
+      <div id="stage"></div>
+      <div class="column">
+        <img src="../../imgs/banquet_poster.jpg" alt="Banquet Poster" />
       </div>
-      <p>hi</p>
-      <section class="sticky">
-        <div class="bubbles">
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-          <div class="bubble"></div>
-        </div>
-      </section>
+      <div class="column">
+        <h2>
+          Join us for an evening of cultural performances, festivities, and a
+          multi-course meal—family-style. End the night at the Afterparty (at
+          10:30pm, location TBD).
+        </h2>
+        <p>
+          Banquet EARLY BIRD tickets are now available. Click
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdeueogOwYyhbf51zROsPweSG_ATO5g6EuOyDUQruvNLtIi6Q/viewform"
+            >HERE</a
+          >
+          to get your ticket now! Regular tickets will be available starting 2/3
+          at 11:59pm and can also be purchased at the door.
+        </p>
+
+        <p>
+          If you successfully purchased a ticket, you should have received a
+          confirmation email within <b>24 hours</b> of your purchase (which may
+          have gone to your Spam folder). If you did not receive a confirmation
+          email, you were not approved for a ticket, even if you already
+          submitted payment. If you already submitted payment but did not
+          receive a confirmation email, please reach out to csa@harvardcsa.org
+          to receive a refund.
+        </p>
+      </div>
     </div>
 
     <div class="info">
-      <div class="icons">
-        <div class="card">
+      <!-- <div class="icons"> -->
+      <!-- <div class="card">
           <img src="" alt="" />
           <h2>ATTIRE</h2>
           <p>
@@ -138,26 +117,27 @@
             7:45pm. If you are late, you will not be able to board the boat.
           </p>
         </div>
-      </div>
+      </div> -->
       <div class="faq">
         <div class="label">
           <h1>FAQs</h1>
         </div>
         <div class="questions">
           <hr />
-          <button class="collapsible">What is Utopia?</button>
+          <button class="collapsible">What is Banquet?</button>
           <div class="content">
             <p>
-              Utopia is an annual intercollegiate boat party hosted by the
-              Havard-Radcliffe Chinese Students Association, in partnership with
-              other Boston-area colleges.
+              Banquet is the annual Lunar New Year celebration hosted by the
+              Havard-Radcliffe Chinese Students Association featuring a variety
+              of cultural performers, authentic Chinese food, and more!
             </p>
           </div>
           <hr />
           <button class="collapsible">How much are tickets?</button>
           <div class="content">
-            <p>Early Bird (limited quantity):</p>
-            <p>Regular:</p>
+            <p>Early Bird (limited quantity): $</p>
+            <p>Regular: $</p>
+            <p>At the Door (while supplies last): $</p>
           </div>
           <hr />
           <button class="collapsible">
@@ -165,8 +145,8 @@
           </button>
           <div class="content">
             <p>
-              Utopia tickets are non-refundable. You can, however, transfer your
-              ticket to another guest. Please email utopia@harvardcsa.org with
+              Banquet tickets are non-refundable. You can, however, transfer
+              your ticket to another guest. Please email csa@harvardcsa.org with
               your name, as well as the name of the person you would like to
               transfer the ticket to.
             </p>
@@ -177,10 +157,8 @@
           </button>
           <div class="content">
             <p>
-              Yes, Utopia is open to all college students in the greater Boston
-              impact and beyond. If you’re a representative from a college and
-              would like to partner with us, please reach out to
-              utopia@harvardcsa.org.
+              Yes, Banquet is open to all college students in the greater Boston
+              impact and beyond.
             </p>
           </div>
           <hr />
@@ -188,13 +166,13 @@
             Who can I contact with questions/concerns?
           </button>
           <div class="content">
-            <p>Please direct all inquiries to utopia@harvardcsa.org.</p>
+            <p>Please direct all inquiries to csa@harvardcsa.org.</p>
           </div>
           <hr />
         </div>
       </div>
     </div>
-    <footer class="navbar">
+    <footer>
       <p>
         Email us at <a href="mailto: csa@harvardcsa.org">csa@harvardcsa.org</a>
       </p>
@@ -238,5 +216,180 @@
         }
       });
     }
+
+    var MathHelper = {
+      randomRange: function (min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      },
+    };
+
+    var Particles = (function () {
+      var list = [];
+
+      var Particle = function (x, y, size, xSpeed, ySpeed, life, opacity) {
+        this.x = x;
+        this.y = y;
+        this.maxSize = size;
+        this.maxOpacity = opacity;
+        this.size = 1;
+        this.opacity = 0;
+        this.xSpeed = xSpeed || 1;
+        this.ySpeed = ySpeed || 1;
+        this.life = life;
+        this.element = document.createElement("div");
+
+        this.element.style.cssText =
+          "background-color:#fff;position:absolute;" +
+          "opacity:" +
+          this.opacity +
+          ";" +
+          "width:" +
+          this.size +
+          "px;" +
+          "height:" +
+          this.size +
+          "px;" +
+          "border-radius:" +
+          this.size +
+          "px;" +
+          "left:" +
+          x +
+          "px;" +
+          "top:" +
+          y +
+          "px;";
+      };
+
+      Particle.prototype = {
+        setOpacity: function (opacity) {
+          this.opacity = opacity;
+          this.element.style.opacity = opacity / 100;
+        },
+
+        setSize: function (size) {
+          this.size = size;
+          this.element.style.borderRadius =
+            this.element.style.height =
+            this.element.style.width =
+              size + "px";
+        },
+
+        setX: function (x) {
+          this.x = x;
+          this.element.style.left = x + "px";
+        },
+
+        setY: function (y) {
+          this.y = y;
+          this.element.style.top = y + "px";
+        },
+      };
+
+      var createNew = function (x, y, size, xSpeed, ySpeed, life, opacity) {
+        var particle = new Particle(x, y, size, xSpeed, ySpeed, life, opacity);
+        list.push(particle);
+        return particle;
+      };
+
+      var animate = function () {
+        var i = list.length;
+
+        while (i--) {
+          var particle = list[i];
+
+          particle.life--;
+
+          // Animate in
+          if (particle.life > 0) {
+            if (particle.opacity < particle.maxOpacity) {
+              particle.setOpacity(particle.opacity + 10);
+            }
+
+            if (particle.size < particle.maxSize) {
+              particle.setSize(particle.size + 1);
+            }
+          }
+
+          particle.setX(particle.x + particle.xSpeed);
+          particle.setY(particle.y + particle.ySpeed);
+
+          // Animate out
+          if (particle.life <= 0) {
+            particle.setSize(particle.size - 1);
+            particle.setOpacity(particle.opacity - 1);
+
+            if (particle.size <= 0) {
+              particle.element.parentNode.removeChild(particle.element);
+              list.splice(i, 1);
+            }
+          }
+        }
+      };
+
+      return {
+        createNew: createNew,
+        animate: animate,
+      };
+    })();
+
+    var Stage = (function () {
+      var stage = document.getElementById("stage");
+
+      var addChild = function (thing) {
+        stage.appendChild(thing.element);
+      };
+
+      return {
+        addChild: addChild,
+      };
+    })();
+
+    var Renderer = (function () {
+      var frameNumber = 0;
+
+      var render = function (callback, fps) {
+        fps = fps || 30;
+
+        if (frameNumber == fps * 100) frameNumber = 0;
+
+        callback();
+
+        frameNumber++;
+
+        setTimeout(function () {
+          render(callback);
+        }, 1000 / fps);
+      };
+
+      var getFrameNumber = function () {
+        return frameNumber;
+      };
+
+      return {
+        render: render,
+        getFrameNumber: getFrameNumber,
+      };
+    })();
+
+    Renderer.render(function () {
+      var density = 3,
+        speed = 1;
+
+      while (density--) {
+        Stage.addChild(
+          Particles.createNew(
+            Math.random() * window.innerWidth, // x
+            Math.random() * window.innerHeight * 1.2, // y
+            MathHelper.randomRange(2, 8), // size
+            MathHelper.randomRange(-speed, speed), // xSpeed
+            MathHelper.randomRange(-speed, speed), // ySpeed
+            MathHelper.randomRange(10, 100), // life
+            MathHelper.randomRange(1, 80) // opacity
+          )
+        );
+      }
+
+      Particles.animate();
+    }, 60);
   </script>
 </html>
