@@ -65,6 +65,9 @@ ul li a:hover {
   text-align: center;
   align-items: start;
   font-size: 150px;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 0.5s linear forwards;
 }
 
 .sponsor-icons {
@@ -103,11 +106,6 @@ a {
   cursor: pointer;
 }
 
-h1 {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: moveup 0.5s linear forwards;
-}
 @keyframes moveup {
   100% {
     opacity: 1;
@@ -178,5 +176,16 @@ h1 {
   .nav-button {
     width: 85px;
     padding: 15px;
+  }
+
+  .header h1 {
+    font-size: 50px;
+  }
+
+  .sponsor-icons img {
+    width:  90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
