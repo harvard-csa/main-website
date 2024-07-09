@@ -204,4 +204,8 @@ h2 {
   .buttons {
     flex-direction: column;
   }
+
+  h1 {
+    font-size: 50px;
+  }
 }
