@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSA Merch</title>
+    <link rel="stylesheet" href="../merch.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+
+        <a href="../index.html">
+            <img src="../imgs/blacklogotext.png" class="logo">
+        </a>
+
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../utopia/index.html">Utopia</a></li>
+            <li><a href="../about/index.html">About</a></li>
+            <li><a href="../board/index.html">Meet the Board</a></li>
+            <li><a href="../alum/index.html">Alumni</a></li>
+            <li><a href="../sponsors/index.html">Sponsors</a></li>
+            <li><a href="../merch/index.html" style="text-decoration: underline; text-underline-offset: 8px">Merch</a></li>
+            <li><a href="../signup/index.html" class="nav-button"><span>Sign Up</span></a></li>
+        </ul>
+    </nav>
+
+    <div class="anim">
+        <h1>CSA Merch</h1>
+
+        <div class="merch-grid">
+            <div class="merch-item">
+                <img src="../imgs/merch/dragon_front.png" alt="CSA Hoodie">
+                <img src="../imgs/merch/dragon_back.png" alt="CSA Hoodie">
+                <h3>Dragon's Den Hoodie</h3>
+                <p>Classic pullover hoodie with embroidered CSA logo</p>
+            </div>
+
+            <div class="merch-item">
+                <img src="../imgs/merch/tea.png" alt="CSA T-Shirt">
+                <h3>Sticker</h3>
+                <p>What's the tea?</p>
+            </div>
+
+            <div class="merch-item">
+                <img src="../imgs/merch/Heron.png" alt="CSA Crewneck">
+                <h3>Sticker</h3>
+                <p>Twin Heron</p>
+            </div>
+        </div>
+
+        <div class="merch-grid">
+            <div class="merch-item">
+                <img src="../imgs/merch/dumpling.png" alt="CSA Hoodie">
+                <h3>Sticker</h3>
+                <p>Dumpling Delight</p>
+            </div>
+
+            <div class="merch-item">
+                <img src="../imgs/merch/panda.png" alt="CSA T-Shirt">
+                <h3>CSA T-Shirt</h3>
+                <p>Cutie Patootie Panda</p>
+            </div>            
+        </div>
+
+        <div class="order-section">
+            <h2>Order your CSA merch now!</h2>
+            <h3>Limited quantities available. Don't miss out!</h3>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLScsiYGVM6zMU4mclh8hrjX1E-26KKkonMbKlL8l_RbbmTcYag/viewform" class="order-button">Order Here</a>
+        </div>
+    </div>
+
+    <footer>
+        <div>Email us at <a href="mailto: csa@harvardcsa.org">csa@harvardcsa.org</a></div>
+        <div>
+            <a href="https://www.facebook.com/hrcsa/"><img src="../imgs/facebook.png" class="socials"></a>
+            <a href="https://www.twitter.com/HarvardCSA"><img src="../imgs/twitter.png" class="socials"></a>
+            <a href="https://www.instagram.com/harvardradcliffecsa"><img src="../imgs/insta.png" class="socials"></a>
+            <a href="https://www.linkedin.com/company/harvard-radcliffe-chinese-students-association/"><img src="../imgs/linkedin.png" class="socials"></a>
+        </div>
+    </footer>
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+
+        for (i = 0; i < coll.length; i++) {
+            coll[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins";
+}
+
+nav,
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem;
+}
+
+.logo {
+    width: 180px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+ul li {
+    margin-right: 20px;
+}
+
+ul li a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+ul li a:hover {
+    color: rosybrown;
+}
+
+.checkbtn {
+    font-size: 28px;
+    color: black;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.anim {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup 0.5s linear forwards;
+}
+
+@keyframes moveup {
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+h1 {
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    font-size: 56px;
+}
+
+.merch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 4rem;
+    margin-bottom: 4rem;
+}
+
+.merch-item {
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.merch-item:hover {
+    transform: translateY(-5px);
+}
+
+.merch-item img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.merch-item h3 {
+    color: maroon;
+    margin-bottom: 0.5rem;
+}
+
+.order-section {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: maroon;
+    color: white;
+    margin-top: 2rem;
+}
+
+.order-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.order-section h3 {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    font-weight: normal;
+}
+
+.order-button {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: white;
+    color: maroon;
+    text-decoration: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+}
+
+.order-button:hover {
+    background-color: lightgrey;
+}
+
+footer {
+    color: maroon;
+    font-size: 16px;
+}
+
+.socials {
+    align-items: center;
+    width: 50px;
+    cursor: pointer;
+}
+
+.nav-button {
+    width: 75px;
+    background: linear-gradient(rgb(42, 0, 0), rgb(128, 0, 0));
+    border-style: solid;
+    border-radius: 10px;
+    display: block;
+    text-align: center;
+    line-height: 25px;
+    padding: 12px;
+}
+
+span {
+    color: white;
+}
+
+@media (max-width: 900px) {
+    .checkbtn {
+        display: block;
+        order: 1;
+        margin-right: 20px;
+        z-index: 3;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 0px;
+        right: -100%;
+        background-color: maroon;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s;
+        z-index: 2;
+    }
+
+    ul li {
+        margin: 20px 0;
+    }
+
+    ul li a {
+        font-size: 20px;
+        color: white;
+    }
+
+    #check:checked ~ ul {
+        right: 0;
+    }
+
+    nav,
+    footer {
+        margin: 1rem 2rem;
+    }
+
+    footer {
+        font-size: 14px;
+    }
+
+    .socials {
+        width: 40px;
+    }
+
+    .nav-button {
+        width: 85px;
+        padding: 15px;
+    }
+
+    .merch-grid {
+        padding: 0 2rem;
+    }
+
+    h1 {
+        font-size: 40px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    .order-section {
+        padding: 3rem 1rem;
+    }
+
+    .order-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .order-section h3 {
+        font-size: 1rem;
+    }
+
+    .order-button {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
