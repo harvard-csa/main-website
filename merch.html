@@ -4,9 +4,190 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSA Merch</title>
-    <link rel="stylesheet" href="../merch.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <link href="https://cdn.tailwindcss.com" rel="stylesheet">
+    <link rel="stylesheet" href="../merch.css">
+
+    <style>
+        .merch-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .hoodie-container {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            padding: 2rem;
+            background: #f8f8f8;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+        
+        .hoodie-image-container {
+            flex: 1;
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .hoodie-image-container:hover {
+            transform: translateY(-5px);
+        }
+        
+        .hoodie-image {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        
+        .hoodie-info {
+            flex: 1;
+            padding: 2rem;
+        }
+        
+        .sticker-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        
+        .sticker-item {
+            position: relative;
+            background: white;
+            border-radius: 15px;
+            padding: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+        
+        .sticker-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .sticker-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .sticker-item:hover .sticker-image {
+            transform: scale(1.05);
+        }
+        
+        .price-tag {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: maroon;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: #ffd700;
+            color: black;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            z-index: 1;
+        }
+        
+        .limited-stock {
+            background: #ff4444;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+        
+        .size-selector {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+        
+        .size-button {
+            padding: 0.5rem 1rem;
+            border: 2px solid maroon;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .size-button.selected {
+            background: maroon;
+            color: white;
+        }
+        
+        .order-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: maroon;
+            color: white;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: 2px solid maroon;
+        }
+        
+        .order-button:hover {
+            background: white;
+            color: maroon;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: maroon;
+            margin: 3rem 0;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: maroon;
+        }
+
+        @media (max-width: 768px) {
+            .hoodie-container {
+                flex-direction: column;
+            }
+            
+            .hoodie-image {
+                height: 400px;
+            }
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -33,47 +214,7 @@
 
     <div class="anim">
         <h1>CSA Merch</h1>
-
-        <div class="merch-grid">
-            <div class="merch-item">
-                <img src="../imgs/merch/dragon_front.png" alt="CSA Hoodie">
-                <img src="../imgs/merch/dragon_back.png" alt="CSA Hoodie">
-                <h3>Dragon's Den Hoodie</h3>
-                <p>Classic pullover hoodie with embroidered CSA logo</p>
-            </div>
-
-            <div class="merch-item">
-                <img src="../imgs/merch/tea.png" alt="CSA T-Shirt">
-                <h3>Sticker</h3>
-                <p>What's the tea?</p>
-            </div>
-
-            <div class="merch-item">
-                <img src="../imgs/merch/Heron.png" alt="CSA Crewneck">
-                <h3>Sticker</h3>
-                <p>Twin Heron</p>
-            </div>
-        </div>
-
-        <div class="merch-grid">
-            <div class="merch-item">
-                <img src="../imgs/merch/dumpling.png" alt="CSA Hoodie">
-                <h3>Sticker</h3>
-                <p>Dumpling Delight</p>
-            </div>
-
-            <div class="merch-item">
-                <img src="../imgs/merch/panda.png" alt="CSA T-Shirt">
-                <h3>CSA T-Shirt</h3>
-                <p>Cutie Patootie Panda</p>
-            </div>            
-        </div>
-
-        <div class="order-section">
-            <h2>Order your CSA merch now!</h2>
-            <h3>Limited quantities available. Don't miss out!</h3>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLScsiYGVM6zMU4mclh8hrjX1E-26KKkonMbKlL8l_RbbmTcYag/viewform" class="order-button">Order Here</a>
-        </div>
+        <div id="merch-root"></div>
     </div>
 
     <footer>
@@ -86,21 +227,118 @@
         </div>
     </footer>
 
-    <script>
-        var coll = document.getElementsByClassName("collapsible");
-        var i;
+    <script type="text/babel">
+        function MerchDisplay() {
+            const [selectedSize, setSelectedSize] = React.useState('M');
+            
+            const sizes = ['S', 'M', 'L', 'XL'];
+            
+            const stickers = [
+                { src: "../imgs/merch/tea.png", name: "What's the tea?", desc: "Tea Sticker"},
+                { src: "../imgs/merch/Heron.png", name: "Twin Heron", desc: "Heron Sticker"},
+                { src: "../imgs/merch/dumpling.png", name: "Dumpling Delight", desc: "Dumpling Sticker" },
+                { src: "../imgs/merch/panda.png", name: "Cutie Patootie Panda", desc: "Panda T-Shirt"}
+            ];
 
-        for (i = 0; i < coll.length; i++) {
-            coll[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var content = this.nextElementSibling;
-                if (content.style.maxHeight) {
-                    content.style.maxHeight = null;
-                } else {
-                    content.style.maxHeight = content.scrollHeight + "px";
-                }
-            });
+            return (
+                <div className="merch-container">                    
+                    <div className="hoodie-container">
+                        <div className="hoodie-image-container">
+                            <div className="featured-badge">Best Seller</div>
+                            <img src="../imgs/merch/dragon_front.png" alt="Dragon's Den Hoodie Front" className="hoodie-image" />
+                        </div>
+                        
+                        <div className="hoodie-image-container">
+                            <img src="../imgs/merch/dragon_back.png" alt="Dragon's Den Hoodie Back" className="hoodie-image" />
+                        </div>
+                        
+                        <div className="hoodie-info">
+                            <h2 style={{fontSize: '2rem', color: 'maroon', marginBottom: '1rem'}}>Dragon's Den Hoodie</h2>
+                            <p style={{fontSize: '1.5rem', color: 'maroon', marginBottom: '1rem'}}>$35.00</p>
+                            <p style={{marginBottom: '1rem', lineHeight: '1.6'}}>
+                                Classic pullover hoodie featuring our exclusive embroidered CSA logo. Made with premium cotton blend 
+                                for ultimate comfort and style. This style runs small. 
+                            </p>
+                            <div className="limited-stock">Limited Stock Available!</div>
+                            
+                            <div style={{marginTop: '2rem'}}>
+                                <p style={{fontWeight: 'bold', marginBottom: '0.5rem'}}>Select Size:</p>
+                                <div className="size-selector">
+                                    {sizes.map(size => (
+                                        <button 
+                                            key={size}
+                                            className={`size-button ${selectedSize === size ? 'selected' : ''}`}
+                                            onClick={() => setSelectedSize(size)}
+                                        >
+                                            {size}
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                            
+                            <a href="https://docs.google.com/forms/d/e/1FAIpQLScsiYGVM6zMU4mclh8hrjX1E-26KKkonMbKlL8l_RbbmTcYag/viewform" 
+                               className="order-button" 
+                               style={{marginTop: '2rem', display: 'inline-block'}}>
+                                Order Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <h2 className="section-title">Stickers & More</h2>
+                    <div style={{
+                        textAlign: 'center',
+                        marginTop: '-2rem',
+                        marginBottom: '2rem',
+                        fontSize: '1rem',
+                        color: '#666'
+                        }}>
+                        Single sticker $3 | Bundle: 2 for $5
+                    </div>
+                    <div className="sticker-grid">
+                        {stickers.map((sticker, index) => (
+                            <div key={index} className="sticker-item">
+                                <img
+                                    src={sticker.src}
+                                    alt={sticker.desc}
+                                    className="sticker-image"
+                                />
+                                <h3 style={{color: 'maroon', fontSize: '1.25rem', marginBottom: '0.5rem'}}>
+                                    {sticker.name}
+                                </h3>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div style={{
+                        textAlign: 'center',
+                        padding: '4rem 2rem',
+                        backgroundColor: 'maroon',
+                        color: 'white',
+                        marginTop: '4rem',
+                        borderRadius: '0.5rem'
+                    }}>
+                        <h2 style={{fontSize: '2rem', marginBottom: '1rem'}}>
+                            Get Your CSA Merch Today!
+                        </h2>
+                        <h3 style={{fontSize: '1.2rem', marginBottom: '2rem', fontWeight: 'normal'}}>
+                            Limited quantities available!
+                        </h3>
+                        <a
+                            href="https://docs.google.com/forms/d/e/1FAIpQLScsiYGVM6zMU4mclh8hrjX1E-26KKkonMbKlL8l_RbbmTcYag/viewform"
+                            className="order-button"
+                            style={{background: 'white', color: 'maroon'}}
+                        >
+                            Order Here
+                        </a>
+                    </div>
+                </div>
+            );
         }
+
+        ReactDOM.render(
+            <MerchDisplay />,
+            document.getElementById('merch-root')
+        );
     </script>
 </body>
 </html>
