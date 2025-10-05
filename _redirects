@@ -1,2 +1,5 @@
-https://harvardcsa.org/*       https://harvardradcliffecsa.org/:splat   301!
-https://www.harvardcsa.org/*   https://harvardradcliffecsa.org/:splat   301!
+# Redirect both HTTP and HTTPS from harvardcsa.org → harvardradcliffecsa.org
+http://harvardcsa.org/*       https://harvardradcliffecsa.org/:splat   301!
+https://harvardcsa.org/*      https://harvardradcliffecsa.org/:splat   301!
+http://www.harvardcsa.org/*   https://harvardradcliffecsa.org/:splat   301!
+https://www.harvardcsa.org/*  https://harvardradcliffecsa.org/:splat   301!
