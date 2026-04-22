@@ -81,11 +81,28 @@ a {
   color: white;
 }
 
+.heading {
+  text-align: center;
+  padding: 1rem 2rem 0;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 1s linear forwards;
+}
+
+.heading h1 {
+  color: maroon;
+  font-size: 58px;
+  margin: 0;
+}
+
 .poster-wrap {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem 3rem 4rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: moveup 1s linear forwards;
 }
 
 .poster-wrap img {
@@ -95,6 +112,13 @@ a {
   object-fit: contain;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+}
+
+@keyframes moveup {
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 @media (max-width: 900px) {
@@ -153,5 +177,9 @@ a {
 
   .poster-wrap {
     padding: 1rem;
+  }
+
+  .heading h1 {
+    font-size: 42px;
   }
 }
