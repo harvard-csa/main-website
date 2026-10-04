@@ -128,6 +128,52 @@ button:hover {
   cursor: pointer;
 }
 
+form > button:disabled,
+form > button:disabled:hover {
+  border-color: gray;
+  color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: not-allowed;
+}
+
+.countdown {
+  text-align: center;
+  color: white;
+}
+
+.countdown-label {
+  font-size: 20px;
+  margin: 0 0 1rem;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.countdown-unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 80px;
+  padding: 12px;
+  border: 2px solid maroon;
+  border-radius: 10px;
+  background: linear-gradient(rgb(42, 0, 0, 1), rgb(128, 0, 0, 0.7));
+}
+
+.countdown-unit span {
+  font-size: 36px;
+  line-height: 1.2;
+}
+
+.countdown-unit small {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .buttons {
   display: flex;
   align-items: center;
@@ -307,5 +353,29 @@ button:hover {
   .faq {
     flex-direction: column;
     margin: 0 30px;
+  }
+
+  .spacing {
+    padding: 0;
+  }
+
+  .countdown-timer {
+    gap: 8px;
+  }
+
+  .countdown-unit {
+    min-width: 0;
+    flex: 1;
+    max-width: 80px;
+    padding: 8px 4px;
+  }
+
+  .countdown-unit span {
+    font-size: 24px;
+  }
+
+  .countdown-unit small {
+    font-size: 9px;
+    letter-spacing: 0;
   }
 }

@@ -46,10 +46,27 @@
       </nav>
       <div class="spacing">
         <h1><span class="huge-font">Utopia is Back.</span></h1>
-        <h1>Friday, October 10th @8PM</h1>
+        <h1>Friday, October 16th @8PM</h1>
+        <div class="countdown" id="countdown">
+          <p class="countdown-label" id="countdown-label"></p>
+          <div class="countdown-timer">
+            <div class="countdown-unit">
+              <span id="cd-days">00</span><small>Days</small>
+            </div>
+            <div class="countdown-unit">
+              <span id="cd-hours">00</span><small>Hours</small>
+            </div>
+            <div class="countdown-unit">
+              <span id="cd-minutes">00</span><small>Minutes</small>
+            </div>
+            <div class="countdown-unit">
+              <span id="cd-seconds">00</span><small>Seconds</small>
+            </div>
+          </div>
+        </div>
         <div class="buttons">
-          <form action="https://forms.gle/Xbj4fNu4DN2pM6Z3A">
-            <button type="submit">Tickets</button>
+          <form action="https://forms.gle/oSTwf4TK34yXrEi57">
+            <button type="submit" id="ticket-button" disabled>Tickets</button>
           </form>
         </div>
       </div>
@@ -69,12 +86,12 @@
           >. We are allowing refunds for a limited number of ticket holders.
         </p>-->
         <p>
-          Looking to party with CSA again? Join us on Friday, October 10th 8-10PM 
+          Looking to party with CSA again? Join us on Friday, October 16th 8-10PM 
           for Utopia, Boston's biggest annual intercollegiate yacht party! 
           We are SO excited to bring back Utopia and can't wait to see you all there.
           Tickets are limited and tend to sell fast, so be sure to purchase yours 
-          right away when early bird ($25) sales begin at 10:00pm on Friday, October 3rd, 
-          or regular tickets ($30) at 10:00pm on Sunday, October 5th. Tickets are also SEF eligible.
+          right away when early bird ($25) sales begin at 10:00pm on Friday, October 9th, 
+          or regular tickets ($30) at 10:00pm on Sunday, October 11th. Tickets are also SEF eligible.
           Follow us on insta @harvardradcliffecsa and stay tuned for more information!
         </p>
 
@@ -218,6 +235,47 @@
   </body>
 
   <script>
+    // Ticket drop times (Eastern). Button stays disabled until early bird opens.
+    var EARLY_BIRD = new Date("2026-10-09T22:00:00-04:00");
+    var REGULAR = new Date("2026-10-11T22:00:00-04:00");
+
+    var countdown = document.getElementById("countdown");
+    var countdownLabel = document.getElementById("countdown-label");
+    var ticketButton = document.getElementById("ticket-button");
+
+    function pad(n) {
+      return n < 10 ? "0" + n : "" + n;
+    }
+
+    function updateCountdown() {
+      var now = new Date();
+      var target;
+
+      if (now < EARLY_BIRD) {
+        target = EARLY_BIRD;
+        countdownLabel.textContent = "Early bird tickets drop in";
+        ticketButton.disabled = true;
+      } else if (now < REGULAR) {
+        target = REGULAR;
+        countdownLabel.textContent = "Early bird is live! Regular tickets drop in";
+        ticketButton.disabled = false;
+      } else {
+        countdown.style.display = "none";
+        ticketButton.disabled = false;
+        clearInterval(countdownInterval);
+        return;
+      }
+
+      var diff = Math.floor((target - now) / 1000);
+      document.getElementById("cd-days").textContent = pad(Math.floor(diff / 86400));
+      document.getElementById("cd-hours").textContent = pad(Math.floor((diff % 86400) / 3600));
+      document.getElementById("cd-minutes").textContent = pad(Math.floor((diff % 3600) / 60));
+      document.getElementById("cd-seconds").textContent = pad(diff % 60);
+    }
+
+    var countdownInterval = setInterval(updateCountdown, 1000);
+    updateCountdown();
+
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
